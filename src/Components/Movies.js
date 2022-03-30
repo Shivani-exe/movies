@@ -23,7 +23,7 @@ export default class Movies extends Component {
         let res = await axios.get('https://backend-react-movie.herokuapp.com/movies');
         console.log(res);
         this.setState({
-           movies: res.data.movies,
+           movies: res.data.movies
             
         })
     }
@@ -123,12 +123,12 @@ export default class Movies extends Component {
       let ei=(si+limit);
       filteredArr=filteredArr.slice(si,ei);
 
-      if(filteredArr.length==0)
-      {
-          this.setState({
-              currPage:1
-          })
-      }
+    //   if(filteredArr.length==0)
+    //   {
+    //       this.setState({
+    //           currPage:1
+    //       })
+    //   }
       let pageNumberArr=[];
 
       for(let i=0;i<numberOfPage;i++)
