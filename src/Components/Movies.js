@@ -121,7 +121,7 @@ export default class Movies extends Component {
         if(cGenre!='All Genres')
         {
             filteredArr=filteredArr.filter((movieObj)=>{
-                return movieObj.genre.name=cGenre
+                return movieObj.genre.name==cGenre
             })
         }
 
